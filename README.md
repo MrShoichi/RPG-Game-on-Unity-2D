@@ -9,11 +9,17 @@
 
 ## Подключения сриптов C++ к Unity
 
-1. В _Visual Studio_(На данный момент 2019) создать проект "Библиотека динамической компоновки"
+1. В _Visual Studio_(На данный момент 2019) создать проект "Библиотека динамической компоновки" ![image](https://user-images.githubusercontent.com/75163895/115126740-222d1980-9fda-11eb-9748-3ae7999f2f77.png)
+
 2. Правой кнопкой нажать на _"Исходные файлы">Добавить>Создать элемент>Файл C++"_
-3. Также нажатием на файлы заголовков создать файл заголовка(.h)
-4. В новый файл C++ внести нужные функции, а также _include "pch.h"_
-5. В файл заголовка добавит:
+![image](https://user-images.githubusercontent.com/75163895/115126751-3a049d80-9fda-11eb-97aa-29b59c7adaff.png)
+![image](https://user-images.githubusercontent.com/75163895/115126761-4557c900-9fda-11eb-8b0f-4b47a1b36e91.png)
+4. Также нажатием на файлы заголовков создать файл заголовка(.h)
+![image](https://user-images.githubusercontent.com/75163895/115126766-50aaf480-9fda-11eb-8000-3098f41a90a6.png)
+![image](https://user-images.githubusercontent.com/75163895/115126772-56083f00-9fda-11eb-95dc-6851eca0fc2c.png)
+
+6. В новый файл C++ внести нужные функции, а также _include "pch.h"_
+8. В файл заголовка добавить:
 ```C++
 #ifndef FIRSTDLL_NATIVE_LIB_H
 #define FIRSTDLL_NATIVE_LIB_H
@@ -30,8 +36,10 @@ extern "C"
 ```
 6. В _pch.h_ добавить свой файл заголовка: include  "название_файла_заголовка.h"
 7. Выбрать Realese x64 перед сборкой и нажать Сборка>Собрать решение.
-8. Перенести из папки C:\Users\имя\source\repos\Название_проекта\x64\Release .dll в папку проекта Unity
-9. В Unity создаем новый скрипт, в нем пишем:
+![image](https://user-images.githubusercontent.com/75163895/115126786-789a5800-9fda-11eb-9d95-d96658f0fcd9.png)
+
+9. Перенести из папки C:\Users\имя\source\repos\Название_проекта\x64\Release .dll в папку проекта Unity
+10. В Unity создаем новый скрипт, в нем пишем:
 ```C++
 using System.Collections;
 using System.Collections.Generic;
